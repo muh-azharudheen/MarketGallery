@@ -8,9 +8,25 @@
 
 import UIKit
 
+
+
+
+
+
 class ViewController: UICollectionViewController {
 
-    private var dataSource: [MarketPhoto] = [MarketPhoto(#imageLiteral(resourceName: "ozil1"), title: "Mesut Ozil 1"),MarketPhoto(#imageLiteral(resourceName: "ozil4"), title: "Mesut Ozil 2"),MarketPhoto(#imageLiteral(resourceName: "ozil3"), title: "Mesut Ozil 3"),MarketPhoto(#imageLiteral(resourceName: "unnamed"), title: "Muhammed Azharudheen \n nbjkbjk Muhammed Azharudheen Muhammed Azharudheen Muhammed Azharudheen"),MarketPhoto(#imageLiteral(resourceName: "ozil2"), title: "Mesut Ozil 4")]
+//    private var dataSource: [MarketPhoto] = [MarketPhoto(#imageLiteral(resourceName: "ozil1"), title: "Mesut Ozil 1"),MarketPhoto(#imageLiteral(resourceName: "ozil4"), title: "Mesut Ozil 2"),MarketPhoto(#imageLiteral(resourceName: "ozil3"), title: "Mesut Ozil 3"),MarketPhoto(#imageLiteral(resourceName: "unnamed"), title: "Muhammed Azharudheen \n nbjkbjk Muhammed Azharudheen Muhammed Azharudheen Muhammed Azharudheen"),MarketPhoto(#imageLiteral(resourceName: "ozil2"), title: "Mesut Ozil 4")]
+    
+    
+    private var dataSource : [MarketPhoto] = [ MarketPhoto(imageURL: "https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2017/11/06143553/Mesut-Ozil-700x367.jpg", title: "Hello"),
+                                       MarketPhoto(imageURL: "https://d3nfwcxd527z59.cloudfront.net/content/uploads/2017/11/20073750/Mesut-Ozil-Arsenal.jpg", title: "Hello"),
+                                       MarketPhoto(imageURL: "https://pbs.twimg.com/media/CwvwL0gWEAQP44O.jpg", title: "Hello"),
+                                       MarketPhoto(imageURL: "https://d.ibtimes.co.uk/en/full/430561/mesut-ozil.jpg", title: "Hello"),
+                                       MarketPhoto(imageURL: "https://dj0j0ofql4htg.cloudfront.net/cms2/image_manager/uploads/News/299128/7/default.jpg", title: "Hello")
+                                       
+                                       
+                                       ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +44,7 @@ class ViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCell
         cell.imageView.image = dataSource[indexPath.item].image
+        cell.backgroundColor = UIColor.blue
         return cell
     }
     

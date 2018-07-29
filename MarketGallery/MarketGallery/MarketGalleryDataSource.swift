@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct MarketGalleryDataSource{
+struct MarketGalleryDataSource{
     
     private(set) var photos: [MarketPhotoViewable] = []
     

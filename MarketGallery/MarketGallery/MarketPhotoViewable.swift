@@ -10,7 +10,7 @@ import UIKit
 
 protocol MarketPhotoViewable: class {
     
-    typealias imageHandler = ( _ image: UIImage?, _ error: Error) -> ()
+    typealias imageHandler = ( _ image: UIImage?, _ error: Error?) -> ()
     
     var image: UIImage? {get}
     
